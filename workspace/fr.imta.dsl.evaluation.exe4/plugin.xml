@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://www.imta.fr/dsl/evaluation/exe4/Exe4" 
+       class = "fr.imta.dsl.evaluation.exe4.exe4.Exe4Package"
+       genModel = "model/generated/Exe4.genmodel" /> 
+	
+  </extension>
+
+
+
+</plugin>

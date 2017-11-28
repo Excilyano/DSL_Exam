@@ -1,0 +1,44 @@
+grammar fr.imta.dsl.evaluation.exe1.Exe1 with org.eclipse.xtext.common.Terminals
+
+generate exe1 "http://www.imta.fr/dsl/evaluation/exe1/Exe1"
+
+Model:
+	frames+=Frame*;
+	
+Frame:
+	'frame' name=ID '{'
+		(title=Title) &
+		(width=Width) &
+		(height=Height) &
+		(content=Content)
+	'}';
+	
+Title:
+	'title:' name=STRING
+;
+
+Width:
+	'width:' value=INT
+;
+
+Height:
+	'height:' value=INT
+;
+
+Content:
+	'content' '{'
+		components+=Component+
+	'}'
+;
+
+Component:
+	Label | Button
+;
+
+Label:
+	'label:' value=STRING
+;
+
+Button:
+	'button:' value=STRING
+;
